@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, TextInput, Text, Button } from 'react-native'
 // require('es6-promise').polyfill();
-import fetch from 'isomorphic-fetch'
+// import fetch from 'isomorphic-fetch'
 
 export default class App extends React.Component {
   state = {
@@ -53,7 +53,7 @@ export default class App extends React.Component {
           onChangeText={(text) => this.setState({ number: text })}
         />
 
-        {showResult && <Text style={styles.numberText}>{text}</Text>}
+        {text && <Text style={styles.numberText}>{text}</Text>}
 
         <View style={styles.buttonContainer}>
           <Button
